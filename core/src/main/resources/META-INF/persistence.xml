@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    <persistence-unit name="BankPU" transaction-type="JTA">
+        <jta-data-source>royal_bank_connection</jta-data-source>
+        <class>com.ar7Enterprise.bank.core.model.User</class>
+        <class>com.ar7Enterprise.bank.core.model.Account</class>
+        <class>com.ar7Enterprise.bank.core.model.Bank</class>
+        <class>com.ar7Enterprise.bank.core.model.History</class>
+        <class>com.ar7Enterprise.bank.core.model.LogEntry</class>
+        <class>com.ar7Enterprise.bank.core.model.ScheduledTransaction</class>
+        <class>com.ar7Enterprise.bank.core.model.Transaction</class>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <properties>
+            <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
+            <property name="jakarta.persistence.sharedCache.mode" value="NONE"/>
+            <property name="eclipselink.cache.shared.default" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>
